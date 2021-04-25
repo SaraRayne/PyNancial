@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Value Stocks
+{% endblock %}
+
+{% block main %}
+    <div>
+        <form action="/send" method="post">
+            <input type="hidden" name="exchange" value="{{ exchange }}">
+            <input type="hidden" name="sector" value="{{ sector }}">
+            <input type="hidden" name="cap" value="{{ cap }}">
+            This is a partial list of your results. To receive a full list, enter your email address:
+            <input autocomplete="off" name="email" placeholder="Email" type="email">
+            <button class="btn btn-primary" type="submit">Send Email</button>
+        </form>
+        <br>
+        <br>
+
+        {{ df | safe }}
+
+    </div>
+{% endblock %}

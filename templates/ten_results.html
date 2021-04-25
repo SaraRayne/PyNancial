@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Daily Top Ten
+{% endblock %}
+
+{% block main %}
+    <div>
+        {{ df | safe }}
+    </div>
+{% endblock %}

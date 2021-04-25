@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    How To Guide
+{% endblock %}
+
+{% block main %}
+
+    <!--Heading that says how to or something
+
+    Paragraph for how the algorithm works
+    (basics, don't give too much away)
+
+    -->
+
+    <h2><strong>How to Use PyNancial Stock Analyzer</strong></h2>
+
+    <br>
+
+    <h4>How to Use the Form</h4>
+
+    <div>
+        <p>You have three selections to make when completing the stock lookup form: Exchange, Sector, and Market Cap. <br>
+        <em>Exchange</em>: There are a few different stock exchanges around the world, and PyNancial searches some of the top choices. These include NASDAQ, NYSE, Euronext, and a few others. <br>
+        <br>
+        <em>Sector</em>: Within each exchange, stocks fall within a specific sector. Most stocks, particularly in the NASDAQ exchange, are in the Technology sector. <br>
+        <br>
+        <em>Market Cap</em>: A company's market cap represents how much the company is worth on the stock market. It's computed by calculating the price per share multiplied by the number of outstanding shares.
+        The higher the market cap, the more established and reliable a company generally is.<br>
+        </p>
+        <br>
+        <p>If you use our Daily Top Ten option instead, the selections are automatically set at NASDAQ exchange, Technology sector, with a
+        market cap of $10 billion.</p>
+    </div>
+
+    <br>
+
+    <h4>How We Obtain Your Results</h4>
+    <p>The algorithm we use is simple. First, we calculate the Price to Earnings Ratio for a stock that meets your criteria. This ratio tells us the stock's value compared to the company's earnings.
+    If the PE for a given stock is less than the median PE for the industry, it's considered a good value. We combine this data with a look at the Discounted Cash Flow. The Discounted
+    Cash Flow estimates the value of a company as a whole based on current and future cash flow in order to determine an estimated value of the company's stocks. If a company's PE is less than
+    the median for the industry, and the current price is less than the estimated value from the DCF, we consider the stock to be a good value purchase. Of course,
+    you should still do your own due dilligence and check the company's recent press releases and any news that might shed light on why the stock is cheaper than its estimated value before making any
+    purchase decisions.</p>
+
+    <br>
+
+    <h4>How To Interpret the Results</h4>
+
+    <div>
+        <p><em>Symbol</em>: Ticker symbol for the stock</p>
+        <p><em>Price</em>: Current/most recent price of the stock (per share)</p>
+        <p><em>Est. Value</em>: Estimated value of the stock (per share) based on company outlook.</p>
+        <p><em>Difference</em>: Estimated value minus current stock price (how much the stock is undervalued).</p>
+    </div>
+
+
+{% endblock %}

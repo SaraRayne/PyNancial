@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <body>
+
+        <form action="/" method="post">
+        <div class="form-group">
+            <label for="exchanges">Exchanges</label>
+            <select id="exchange" name="exchange">
+                <option value="nyse">NYSE</option>
+                <option value="nasdaq">NASDAQ</option>
+                <option value="euronex">Euronext</option>
+                <option value="tsx">TSX</option>
+                <option value="etf">ETF</option>
+            </select><br>
+            <label for="sectors">Sectors</label>
+            <select id="sector" name="sector">
+                <option value="Consumer Cyclical">Consumer Cyclical</option>
+                <option value="Energy">Energy</option>
+                <option value="Technology">Technology</option>
+                <option value="Industrial">Industrials</option>
+                <option value="Financial Services">Financial Services</option>
+                <option value="Basic Materials">Basic Materials</option>
+                <option value="Communication Services">Communication Services</option>
+                <option value="Consumer Defensive">Consumer Defensive</option>
+                <option value="Healthcare">Healthcare</option>
+                <option value="Real Estate">Real Estate</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Industrial Goods">Industrial Goods</option>
+                <option value="Financial">Financial</option>
+                <option value="Services">Services</option>
+                <option value="Conglomerates">Conglomerates</option>
+            </select><br>
+            <label for="cap">Market Cap (greater than)</label>
+            <select id="cap" name="cap">
+                <option value="50000000">50 Million (USD)</option>
+                <option value="300000000">300 Million (USD)</option>
+                <option value="2000000000">2 Billion (USD)</option>
+                <option value="10000000000">10 Billion (USD)</option>
+            </select><br>
+        </div>
+        <button class="btn btn-primary" type="submit">Search for Stocks</button>
+        </form>
+
+        <div class="small text-center text-muted">
+            <p>(Please be patient, as loading times may vary)</p>
+        </div>
+    </body>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Daily Top Ten
+{% endblock %}
+
+{% block main %}
+
+    <div>
+        <form action="/top" method="post">
+            <button class="btn btn-primary" type="submit">Get NASDAQ Top Ten Value Stocks</button>
+        </form>
+
+    </div>
+
+{% endblock %}
